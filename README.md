@@ -14,7 +14,7 @@
 ## Quick Start
 
 ```bash
-$ git clone git@github.com:dotzero/node-url-shortener.git
+$ git clone https://github.com/Isgi/node-url-shortener.git nus
 $ cd nus
 $ npm install
 $ node app
@@ -48,20 +48,35 @@ $ NODE_ENV=production node app --url "http://example.com"
 
 # RESTful API
 
-`POST /api/v1/shorten` with form data `long_url=http://google.com`,
+`POST /api/v1/shorten` with form data `long_url=https://zahironline.com`,
 `start_date=""`, `end_date=""`, `c_new=false`.
 
 NOTE: You can send the post requests without the date and c_new params
 
-`POST /api/v1/shorten` with form data `long_url=http://google.com`, `start_date`="2017/06/19", `end_date`="2017/06/20", `c_new`=true
+`POST /api/v1/shorten` with form data `long_url=https://zahironline.com`, `start_date`="2017/06/19", `end_date`="2017/06/20", `c_new`=true
 
 The c_new paramter is do that it creates a new short url if one already exists for the url
 
 ```json
 {
   "hash": "rnRu",
-  "long_url": "http://google.com",
+  "long_url": "https://zahironline.com",
   "short_url": "http://127.0.0.1:3000/rnRu",
+  "status_code": 200,
+  "status_txt": "OK"
+}
+```
+
+OR if hash are set
+
+`POST /api/v1/shorten` with form data `long_url=https://zahironline.com`, `hash=ZHR`
+`start_date=""`, `end_date=""`, `c_new=false`.
+
+```json
+{
+  "hash": "rnRu",
+  "long_url": "https://zahironline.com",
+  "short_url": "http://127.0.0.1:3000/ZHR",
   "status_code": 200,
   "status_txt": "OK"
 }
