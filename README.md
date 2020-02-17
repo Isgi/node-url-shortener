@@ -74,7 +74,7 @@ OR if hash are set
 
 ```json
 {
-  "hash": "rnRu",
+  "hash": "ZHR",
   "long_url": "https://zahironline.com",
   "short_url": "http://127.0.0.1:3000/ZHR",
   "status_code": 200,
